@@ -25,10 +25,6 @@
 }
 
 .poTooltipWrapperStyles {
-  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  @include textReset;
   width: var(--popoverWidth);
   max-width: 276px;
   background-color: var(--popoverBgCol);
@@ -76,6 +72,10 @@
 .poTooltipHeadingStyles {
   font-family: "Roboto Bold";
   font-size: var(--popoverHeadingSize);
+  line-height: token;
+  text-align: var(--popoverTextAlign);
+  letter-spacing: token;
+  text-transform: token;
   color: var(--popoverTextCol);
   background-color: var(--popoverHeadingBgCol);
   border-bottom-width: var(--popoverBorderWidth);
@@ -88,7 +88,13 @@
 }
 
 .poTooltipTextWrapperStyles {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: var(--popoverTextSize);
+  line-height: 1.4;
+  text-align: var(--popoverTextAlign);
+  letter-spacing: token;
+  text-transform: token;
+  @include textReset;
   color: var(--popoverTextCol);
   padding-inline: var(--popoverTextPaddingInline);
   padding-block: var(--popoverTextPaddingBlock);
@@ -98,8 +104,4 @@
     padding-left: 15px;
     margin: 0;
   }
-}
-
-.hidden {
-  display: none;
 }

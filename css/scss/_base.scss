@@ -24,12 +24,13 @@
   --popoverHeadingBgCol: #f0f0f0;
   --popoverHeadingPaddingBlock: 7px;
   --popoverTextSize: 12px;
+  --popoverTextAlign: left;
   --popoverTextCol: #383838;
   --popoverTextPaddingInline: 12px;
   --popoverTextPaddingBlock: 12px;
   --popoverTriangleSize: calc(9.5px + var(--popoverBorderWidth));
   --popoverTriangleBorder: calc(var(--popoverTriangleSize) + var(--popoverBorderWidth));
-  --popoverTrianglePosition: calc(0% - var(--popoverTriangleBorder)); // -11px
+  --popoverTrianglePosition: calc(0% - var(--popoverTriangleBorder));
 
   --black: #000;
   --white: #fff;
@@ -139,4 +140,8 @@ body {
   font-size: 14px;
   display: flex;
   align-items: center;
+}
+
+.hidden {
+  display: none;
 }
