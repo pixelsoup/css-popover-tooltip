@@ -1,0 +1,43 @@
+<!-- https://developer.mozilla.org/en-US/docs/Web/CSS/:popover-open -->
+<!--  https://caniuse.com/?search=popover -->
+<!--  https://carbondesignsystem.com/components/popover/usage#caret-tip -->
+<!doctype html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Popover Tooltip</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/production.css">
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <div class="flexContainer">
+
+          <div class="inputRowInfoBtn">
+            <label class="classImFormLabel" for="conditionAverage"><input id="conditionAverage" type="radio">Average</label>
+            <div class="popoverWrapper">
+              <button id="js-popoverBtn" class="popoverBtn"></button>
+              <div id="js-popoverTooltipWrapper" class="popoverTooltipWrapper hidden" role="tooltip">
+                <div class="popoverArrow"></div>
+                <h3 class="popoverHeading">Average</h3>
+                <div class="popoverContent">
+                  <ul>
+                    <li>Passenger vehicles would have travelled about 20,000 kilometres per year.</li>
+                    <li>Commercial vehicles may have travelled greater distances. </li>
+                    <li>Reasonably well maintained. </li>
+                    <li>Mechanically sound.</li>
+                    <li>Only a few paint and panel blemishes.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <script src="./js/development.js"></script>
+  </body>
+</html>

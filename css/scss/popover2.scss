@@ -1,0 +1,105 @@
+.popoverWrapper {
+  position: relative;
+  display: flex;
+}
+
+.popoverBtn {
+  @include btnReset;
+  cursor: help;
+
+  &:after {
+    content: '';
+    width: var(--popoverBtnSize);
+    height: var(--popoverBtnSize);
+    background-position: 50% 50%;
+    transition: background-image 150ms ease-in-out;
+    display: block;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice' width='100%25' height='100%25' viewBox='0 0 24 24'%3E%3Cpath d='M4.2,4.3C6.2,2.1,9,1,12,1c2.9-0.1,5.8,1.1,7.8,3.3c2.1,2,3.3,4.8,3.2,7.7c0,2.9-1.1,5.8-3.2,7.8c-2,2.1-4.9,3.2-7.8,3.2c-2.9,0-5.7-1.1-7.8-3.2C2.1,17.7,1,14.9,1,12C1,9.1,2.1,6.3,4.2,4.3z M5.8,18.2c1.6,1.7,3.9,2.6,6.2,2.6c2.3,0,4.6-0.9,6.2-2.6c1.7-1.6,2.6-3.9,2.6-6.2c0-2.3-0.9-4.6-2.6-6.2c-1.6-1.7-3.9-2.6-6.2-2.6c-2.3,0-4.6,0.9-6.2,2.6C4.1,7.4,3.2,9.7,3.2,12C3.2,14.3,4.1,16.6,5.8,18.2z M13.3,8.2h-2.6V5.6h2.6L13.3,8.2z M13.3,18.4h-2.6v-7.6h2.6L13.3,18.4z' fill='%238b8b8b' /%3E%3C/svg%3E");
+
+  }
+
+  &:hover:after,
+  &:active:after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid slice' width='100%25' height='100%25' viewBox='0 0 24 24'%3E%3Cpath d='M4.2,4.3C6.2,2.1,9,1,12,1c2.9-0.1,5.8,1.1,7.8,3.3c2.1,2,3.3,4.8,3.2,7.7c0,2.9-1.1,5.8-3.2,7.8c-2,2.1-4.9,3.2-7.8,3.2c-2.9,0-5.7-1.1-7.8-3.2C2.1,17.7,1,14.9,1,12C1,9.1,2.1,6.3,4.2,4.3z M5.8,18.2c1.6,1.7,3.9,2.6,6.2,2.6c2.3,0,4.6-0.9,6.2-2.6c1.7-1.6,2.6-3.9,2.6-6.2c0-2.3-0.9-4.6-2.6-6.2c-1.6-1.7-3.9-2.6-6.2-2.6c-2.3,0-4.6,0.9-6.2,2.6C4.1,7.4,3.2,9.7,3.2,12C3.2,14.3,4.1,16.6,5.8,18.2z M13.3,8.2h-2.6V5.6h2.6L13.3,8.2z M13.3,18.4h-2.6v-7.6h2.6L13.3,18.4z' fill='%23000' /%3E%3C/svg%3E");
+  }
+}
+
+.popoverTooltipWrapper {
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  @include textReset;
+  width: var(--popoverWidth);
+  max-width: 276px;
+  background-color: var(--popoverBgCol);
+  border-width: var(--popoverBorderWidth);
+  border-style: solid;
+  border-color: var(--popoverBorderCol);
+  border-radius: var(--popoverBordeRadius);
+  box-shadow: var(--popoverBoxShadow);
+  animation: fade-in-up 250ms;
+
+  @include AbsoluteCentreX;
+  bottom: calc(100% + var(--popoverTriangleBorder));
+  z-index: 1060;
+}
+
+.popoverArrow {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  bottom: (var(--popoverTrianglePosition));
+  border-top-color: var(--popoverBorderCol);
+  border-width: var(--popoverTriangleBorder);
+  border-bottom-width: 0;
+  @include AbsoluteCentreX;
+
+
+  &:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    bottom: -9px;
+    border-top-color: var(--popoverBgCol);
+    border-bottom-width: 0;
+    border-width: var(--popoverTriangleSize);
+    position: absolute;
+    transform: translateX(-50%);
+  }
+}
+
+.popoverHeading {
+  font-family: "Roboto Bold";
+  font-size: var(--popoverHeadingSize);
+  color: var(--popoverTextCol);
+  background-color: var(--popoverHeadingBgCol);
+  border-bottom-width: var(--popoverBorderWidth);
+  border-bottom-style: solid;
+  border-bottom-color: var(--popoverBorderCol);
+  padding-inline: var(--popoverTextPaddingInline);
+  padding-block: var(--popoverHeadingPaddingBlock);
+  border-radius: var(--popoverBordeRadius) var(--popoverBordeRadius) 0 0;
+  margin: 0;
+}
+
+.popoverContent {
+  font-size: var(--popoverTextSize);
+  color: var(--popoverTextCol);
+  padding-inline: var(--popoverTextPaddingInline);
+  padding-block: var(--popoverTextPaddingBlock);
+
+  ul,
+  ol {
+    padding-left: 15px;
+    margin: 0;
+  }
+}
+
+.hidden {
+  display: none;
+}

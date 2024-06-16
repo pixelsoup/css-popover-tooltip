@@ -1,0 +1,142 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/webfonts/Roboto-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("https://s3-ap-southeast-2.amazonaws.com/assets.i-motor.com.au/webfonts/Roboto-Bold.woff2") format("woff2");
+}
+
+:root {
+  --blue: #428fbd;
+  --red: #ff5722;
+  --purple: #734f79;
+  --boxShadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  --popoverBtnSize: 20px;
+  --popoverBorderWidth: 1px;
+  --popoverBorderCol: #d4d4d4;
+  --popoverBgCol: #fff;
+  --popoverBordeRadius: 7px;
+  --popoverBoxShadow: 0 3px 5px rgba(0, 0, 0, 0.15);
+  --popoverWidth: 300px;
+  --popoverHeadingSize: 13px;
+  --popoverHeadingBgCol: #f0f0f0;
+  --popoverHeadingPaddingBlock: 7px;
+  --popoverTextSize: 12px;
+  --popoverTextCol: #383838;
+  --popoverTextPaddingInline: 12px;
+  --popoverTextPaddingBlock: 12px;
+  --popoverTriangleSize: calc(9.5px + var(--popoverBorderWidth));
+  --popoverTriangleBorder: calc(var(--popoverTriangleSize) + var(--popoverBorderWidth));
+  --popoverTrianglePosition: calc(0% - var(--popoverTriangleBorder)); // -11px
+
+  --black: #000;
+  --white: #fff;
+  --black3: #f7f7f7;
+  --black4: #f5f5f5;
+  --black5: #f2f2f2;
+  --black6: #f0f0f0;
+  --black7: #ededed;
+  --black8: #ebebeb;
+  --black9: #e8e8e8;
+  --black10: #e5e5e5;
+  --black12: #e0e0e0;
+  --black14: #dbdbdb;
+  --black15: #dcddde;
+  --black16: #d9d9d9;
+  --black17: #d4d4d4;
+  --black20: #ccc;
+  --black25: #c1c1c1;
+  --black27: #bababa;
+  --black30: #b2b2b2;
+  --black35: #a6a6a6;
+  --black40: #a7a9ac;
+  --black42: #959595;
+  --black43: #929292;
+  --black45: #888;
+  --black50: #808080;
+  --black51: #808080;
+  --black55: #737373;
+  --black60: #666666;
+  --black63: #666666;
+  --black65: #595959;
+  --black67: #555555;
+  --black70: #4d4d4d;
+  --black71: #4c4c4c;
+  --black75: #404040;
+  --black80: #333;
+  --black82: #2d2d2d;
+  --black85: #262626;
+  --black87: #212121;
+  --black88: #1a1a1a;
+  --black89: #1c1c1c;
+  --black90: #191919;
+  --black92: #141414;
+  --black93: #121212;
+  --black94: #0f0f0f;
+  --black95: #0d0d0d;
+  --black97: #2d2a2b;
+  --black100: #000;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body,
+.main,
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", serif;
+  font-size: 20px;
+  margin: 50px 0;
+  background: var(--black5);
+}
+
+.classIconSvg {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  max-width: 100%;
+  transition: fill 150ms ease-in;
+  fill: #808080;
+}
+
+
+.container {
+  max-width: 700px;
+  margin-inline: auto;
+}
+
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.inputRowInfoBtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.classImFormLabel {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
