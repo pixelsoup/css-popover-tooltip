@@ -1,9 +1,9 @@
-.popoverWrapper {
+.popoverTooltipWrapperStyles {
   position: relative;
   display: flex;
 }
 
-.popoverBtn {
+.poTooltipBtnStyles {
   @include btnReset;
   cursor: help;
 
@@ -24,7 +24,7 @@
   }
 }
 
-.popoverTooltipWrapper {
+.poTooltipWrapperStyles {
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.4;
@@ -44,7 +44,7 @@
   z-index: 1060;
 }
 
-.popoverArrow {
+.poTooltipArrowStyles {
   display: block;
   width: 0;
   height: 0;
@@ -73,7 +73,7 @@
   }
 }
 
-.popoverHeading {
+.poTooltipHeadingStyles {
   font-family: "Roboto Bold";
   font-size: var(--popoverHeadingSize);
   color: var(--popoverTextCol);
@@ -87,7 +87,7 @@
   margin: 0;
 }
 
-.popoverContent {
+.poTooltipTextWrapperStyles {
   font-size: var(--popoverTextSize);
   color: var(--popoverTextCol);
   padding-inline: var(--popoverTextPaddingInline);
